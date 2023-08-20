@@ -1,0 +1,835 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.375;
+  min-height: 100%;
+  color: $black;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  transition-duration: .3s;
+  transition-property: color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul, ol{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+.blue {
+  color: $blue;
+}
+
+br {
+  @include md-block {
+    display: none;
+  }
+}
+
+.padding {
+  padding: 88px 0;
+  @include md-block {
+    padding: 64px 0;
+  }
+  
+  &--bottom {
+    padding-top: 0;
+    @include md-block {
+      padding-top: 0;
+    }
+  }
+  
+  &--top {
+    padding-bottom: 0;
+    @include md-block {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.main {
+  padding-top: 131.66px;
+  @include sm-block {
+    padding-top: 64.41px;
+  }
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  
+  &__square {
+    margin-right: 6px;
+    @include sm-block {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  
+  &__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    @include sm-block {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.main-block {
+  text-align: center;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0 150px;
+  @include lg-block {
+    padding: 73px 0 169px;
+  }
+  
+  &__subtitle {
+    color: $white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.48px;
+    margin-bottom: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sm-block {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20.466px;
+      margin-bottom: 14px;
+    }
+    
+    svg {
+      margin-right: 6px;
+      @include sm-block {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  
+  &__title {
+    margin-bottom: 32px;
+    @include sm-block {
+      margin-bottom: 8px;
+    }
+  }
+  
+  &__text {
+    color: $white;
+    font-size: 24px;
+    font-weight: 400;
+    @include sm-block {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  
+  &__btn.btn {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 15.5px 10px;
+    min-width: 459px;
+    @include sm-block {
+      min-width: 287px;
+      margin-top: 23px;
+      font-size: 14px;
+      padding: 12.5px 10px;
+    }
+  }
+}
+
+.priorities-left {
+  &__title {
+    color: #37393F;
+    margin-top: 19px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.48px;
+    font-family: Poppins;
+    @include sm-block {
+      font-size: 24px;
+      line-height: normal;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+  }
+  
+  &__text {
+    margin-top: 16px;
+    color: $grey;
+    font-size: 16px;
+    font-weight: 400;
+    @include sm-block {
+      font-size: 16px;
+      line-height: 22.304px;
+      margin-top: 0;
+    }
+  }
+  
+  &__img {
+    @include lg-block {
+      margin: 0 auto;
+      margin-top: 0;
+      display: block;
+    }
+  }
+}
+
+.priorities-right {
+  @include lg-block {
+    margin-bottom: 90px;
+  }
+  @include sm-block {
+    margin-bottom: 30px;
+  }
+  
+  &__title {
+    margin-bottom: 16px;
+    @include sm-block {
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+  }
+  
+  &__text {
+    margin-bottom: 64px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey;
+    font-family: Poppins;
+    @include sm-block {
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.priorities-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 400;
+    @include sm-block {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    img {
+      margin-right: 8px;
+      @include sm-block {
+        max-width: 17.5px;
+        margin-right: 5px;
+        flex-shrink: 0;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+.services {  
+  &__title {
+    margin-bottom: 64px;
+    text-align: center;
+    @include sm-block {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.services-card-wrap {
+  margin-bottom: 72px;
+  @include sm-block {
+    margin-bottom: 32px;
+  }
+}
+
+.services-card {
+  border-top: 1px solid $light-grey;
+  background: $white;
+  box-shadow: 0px 3.850891351699829px 3.850891351699829px 0px rgba(0, 0, 0, 0.08);
+  padding: 32px 48px;
+  min-height: 338px;
+  height: calc(100%);
+  @include lg-block {
+    min-height: inherit;
+  }
+  @include sm-block {
+    padding: 24px 8px 85px;
+    text-align: center;
+  }
+  
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    @include sm-block {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__icon {
+    flex-shrink: 0;
+    margin-left: 25px;
+    width: 92px;
+    height: 92px;
+    background-color: $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    @include sm-block {
+      margin: 0 auto;
+      width: 63.443px;
+      height: 63.658px;
+      
+      img {
+        max-width: 38px;
+      }
+    }
+    
+    &.blue {
+      background-color: $blue;
+    }
+  }
+  
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    @include sm-block {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 444px;
+    color: $grey;
+    @include md-block {
+      max-width: inherit;
+    }
+    @include sm-block {
+      font-size: 14px;
+    }
+  }
+}
+
+.feedback {
+  @include sm-block {
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+    @include sm-block {
+      margin-bottom: 6px;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey;
+    text-align: center;
+    margin-bottom: 82px;
+    @include sm-block {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.sm-wrap {
+  @include md-block {
+    margin: 0 -16px;    
+  }
+}
+
+.feedback-carousel {
+  clip-path: inset( -100vw -15px -100vw -100vw );
+  position: relative;
+  
+  .owl-stage-outer {
+    padding: 40px;
+    margin: -40px;
+    @include xl-block {
+      padding: 40px 20px;
+      margin: -40px -20px;
+    }
+  }
+  
+  &__item {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.08), 0px 24px 32px 0px rgba(0, 0, 0, 0.08);
+    width: 416px;
+    height: 442px;
+    padding: 52px 32px 48px;
+    @include xxl-block {
+      width: 355px;
+      height: 455px;
+    }
+    @include xl-block {
+      width: 455px;
+      height: 442px;
+    }
+    @include lg-block {
+      width: 335px;
+      height: 455px;
+    }
+    @include md-block {
+      width: inherit;
+      max-width: 307px;
+      height: 292px;
+      padding: 48px 24px;
+      margin: 0 0 0 16px;
+    }
+  }
+  
+  &__title {
+    color: #37393F;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    @include md-block {
+      font-size: 20px;
+    }
+  }
+  
+  &__star {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    
+    img {
+      margin-right: 6px;
+      max-width: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  &__text {
+    font-family: Poppins;
+    color: $grey;
+    font-size: 16px;
+    font-weight: 400;
+    @include md-block {
+      font-size: 14px;
+    }
+  }
+  
+  .owl-nav {
+    bottom: 77px;
+    display: flex;
+    justify-content: end;
+    margin-top: 48px;
+    
+    &>button {
+      border-radius: 50%;
+      background-color: rgba(242, 242, 242, 0.70) !important;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      
+      &:hover {
+        background-color: $blue !important;
+        
+        svg path {
+          stroke: $white;
+        }
+      }
+      
+      &:first-child {
+        margin-right: 26px;
+      }
+    }
+  }
+}
+
+.consultation {
+  background-color: $blue;
+  color: $white;
+  
+  .subtitle {
+    @include sm-block {
+      justify-content: center;
+    }
+  }
+  
+  &__title {
+    color: $white;
+    margin-bottom: 64px;
+    @include sm-block {
+      text-align: center;
+      margin-bottom: 43px;
+    }
+  }
+  
+  &__card {
+    background-color: $green;
+    padding: 40px 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+    @include sm-block {
+      padding: 22px 19px;
+      margin-bottom: 48px;
+    }
+    
+    &-logo {
+      width: 125.038px;
+      height: 125.038px;
+      border: 3px solid #6B78E5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Urbanist;
+      font-size: 27.416px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-right: 24px;
+      @include sm-block {
+        width: 76.556px;
+        height: 76.556px;
+        margin-right: 24px;
+        font-size: 18.791px;
+      }
+    }
+    
+    &-text {
+      font-family: Poppins;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 31.75px;
+      @include sm-block {
+        font-size: 20px;
+        line-height: normal;
+      }
+    }
+  }
+  
+  &__right {
+    max-width: 580px;
+    margin-left: auto;
+    @include lg-block {
+      max-width: inherit;
+      margin-bottom: 40px;
+    }
+    @include sm-block {
+      .consultation__title {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.consultation-list {  
+  &__item {
+    display: flex;
+    margin-bottom: 31px;
+    max-width: 472px;
+    @include lg-block {
+      max-width: inherit;
+      margin-bottom: 24px;
+    }
+    @include sm-block {
+      margin-bottom: 50px;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+      
+      .consultation-list__text {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  &__icon {
+    margin-right: 16px;
+    margin-top: 6px;
+    flex-shrink: 0;
+    @include sm-block {
+      max-width: 27px;
+      margin-right: 13px;
+      margin-top: 0;
+    }
+  }
+  
+  &__title {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.48px;
+    margin-bottom: 8px;
+    @include sm-block {
+      font-size: 20px;
+      line-height: normal;
+      margin-bottom: 14.5px;
+    }
+  }
+  
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    @include sm-block {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+  
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: $white;
+    @include sm-block {
+      display: none;
+    }
+  }
+}
+
+.consultation-form {
+  padding: 56px 56px 144px;
+  background-color: $white;
+  @include sm-block {
+    padding: 48px 12px;
+  }
+  
+  .form__label {
+    color: $black;
+  }
+}
+
+.about {
+  @include sm-block {
+    padding-bottom: 14px;
+  }
+}
+
+.about-card {
+  text-align: center;
+  max-width: 254px;
+  margin: 0 auto;
+  
+  @include lg-block {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  
+  &__icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px 11px rgba(241, 241, 241, 0.44);
+    background-color: $white;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    @include sm-block {
+      margin-bottom: 8px;
+    }
+    
+    &.blue {
+      background-color: $blue;
+    }
+  }
+  
+  &__num {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $green;
+    @include sm-block {
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: $blue;
+    }
+  }
+  
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 21px;
+    font-family: Poppins;
+    @include sm-block {
+      font-size: 20px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+  }
+  
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $grey;
+    @include sm-block {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+}
+
+.footer {
+  background-color: #37393F;
+  padding: 95px 0 118px;
+  color: $white;
+  @include lg-block {
+    padding: 47px 0 52px;
+  }
+  
+  &__logo {
+    font-family: Urbanist;
+    font-size: 47.747px;
+    font-weight: 800;
+    flex-shrink: 0;
+    @include lg-block {
+      margin-bottom: 60px;
+    }
+    @include sm-block {
+      font-size: 29.88px;
+      margin-bottom: 70px;
+    }
+  }
+  
+  &__line {
+    margin: 109px 0 24px;
+    height: 1px;
+    background-color: $grey;
+    @include lg-block {
+      margin: 16px 0;
+    }
+  }
+  
+  &__copyright {
+    font-size: 12px;
+    font-weight: 400;
+    @include md-block {
+      font-size: 10px;
+    }
+  }
+  
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    @include lg-block {
+      margin-top: 60px;
+    }
+    @include sm-block {
+      margin-top: 80px;
+    }
+    
+    &-link {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  @include lg-block {
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__icon {
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    background-color: #484848;
+    @include sm-block {
+      width: 40px;
+      height: 40px;
+      
+      img {
+        width: 17px;
+      }
+    }
+  }
+  
+  &__title {
+    font-family: Poppins;
+    font-size: 20px;
+    color: $white;
+    font-weight: 600;
+    margin-bottom: 3px;
+    @include sm-block {
+      font-size: 16px;
+    }
+  }
+  
+  &__info {
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    @include sm-block {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+}

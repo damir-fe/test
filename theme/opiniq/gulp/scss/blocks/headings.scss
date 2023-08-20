@@ -1,0 +1,46 @@
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 66px;
+  color: $white;
+  @include lg-block {
+    font-size: 65px;
+    line-height: 1;
+  }
+  @include md-block {
+    font-size: 40px;
+  }
+  @include sm-block {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26.4px;
+  }
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38.72px;
+  color: $black;
+  @include md-block {
+    font-size: 32px;
+    line-height: 1;
+  }
+  @include sm-block {
+    font-size: 24px;
+    line-height: 26.4px;
+  }
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29.04px;
+  color: $black;
+}

@@ -1,0 +1,125 @@
+.form {
+  &__label {
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22.68px;
+    color: $white;
+    @include sm-block {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 2.37px;
+    }
+  }
+  
+  &__input {
+    border-radius: 4px;
+    border: 1px solid #E2E2E2;
+    padding: 16px;
+    background-color: #fff0;
+    color: #20102B;
+    outline:none;
+    width: 100%;
+    @include sm-block {
+      font-size: 12px;
+      padding: 9px;
+    }
+    
+    &-error {
+      font-size: 12px;
+      color: $notification-error;
+      font-weight: 400;
+      margin-top: 4px;
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+    }
+    
+    &.invalid {
+      border: 1px solid #DB371F;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 16px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 18px;
+      height: 18px;
+    }
+    
+    &-wrap {
+      position: relative;
+    }
+    
+    &::-webkit-input-placeholder {
+      color: #9B959F;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #9B959F;
+      opacity:  1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #9B959F;
+      opacity:  1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #9B959F;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #9B959F;
+    }
+    &::placeholder { /* Most modern browsers support this now. */
+      color: #9B959F;
+    }
+  }
+  
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    width: 100%;
+    @include sm-block {
+      margin-bottom: 24px;
+    }
+    
+    &:first-child {
+      margin-right: 18px;
+      @include sm-block {
+        margin-right: 11px;
+      }
+    }
+  }
+  
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__btn {
+    margin-top: 64px;
+    width: 100%;
+    padding: 14.5px 64px;
+    @include sm-block {
+      padding: 11px 24px;
+      margin-top: 32px;
+      min-width: 272px;
+    }
+  }
+  
+  &__textarea {
+    text-transform: inherit;
+    padding: 16px;
+    min-height: 199px;
+    resize: none;
+    @include md-block {
+      min-height: 103px;
+    }
+    @include sm-block {
+      font-size: 12px;
+      padding: 9px;
+    }
+  }
+}
